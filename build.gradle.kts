@@ -3,7 +3,7 @@ plugins {
 }
 
 val baseVersion = "0.1"
-val elasticsearchVersion = "7.17.2"
+val elasticsearchVersion = "7.17.3"
 
 group = "fi.evident.elasticsearch"
 version = "$baseVersion-es$elasticsearchVersion"
