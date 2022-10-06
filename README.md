@@ -6,24 +6,18 @@ The Raudikko Analysis plugin provides Finnish language analysis using [Raudikko]
 
 | Plugin version | Raudikko version | Elasticsearch versions |
 | -------------- | ---------------- | ---------------------- |
+| 0.1.1          | 0.1.1            | 7.x.x                  |
 | 0.1            | 0.1.1            | 7.3.2, 7.10.0          |
 
-If you are not installing the latest version, follow the links in the table to see installation instructions for the old version.
+The plugin *should* support all 7.x.x versions, but Elasticsearch requires the plugin to declare an exact ES version, so each release of the plugin has several packages per ES version. Check [releases](https://github.com/EvidentSolutions/elasticsearch-analysis-raudikko/releases) if the version you need is included, and if not, please create an issue requesting support for that version.
+
 
 ## Installing
 
-To install the plugin, run the command depending on your ES installation: 
-
-### Elasticsearch 7.3.2
+To install the plugin, run the following command, changing the version in URL to match your version of Elasticsearch:
 
 ```
-bin/elasticsearch-plugin install https://github.com/EvidentSolutions/elasticsearch-analysis-raudikko/releases/download/v0.1/elasticsearch-analysis-raudikko-0.1-es7.3.2.zip
-```
-
-### Elasticsearch 7.10.0
-
-```
-bin/elasticsearch-plugin install https://github.com/EvidentSolutions/elasticsearch-analysis-raudikko/releases/download/v0.1/elasticsearch-analysis-raudikko-0.1-es7.10.0.zip
+bin/elasticsearch-plugin install https://github.com/EvidentSolutions/elasticsearch-analysis-raudikko/releases/download/v0.1.1/elasticsearch-analysis-raudikko-0.1.1-es7.16.3.zip
 ```
 
 ### Verify installation
@@ -84,7 +78,7 @@ this one in place.
 
 ## License and copyright
  
-Copyright (C) 2021  Evident Solutions Oy
+Copyright (C) 2021-2022  Evident Solutions Oy
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
