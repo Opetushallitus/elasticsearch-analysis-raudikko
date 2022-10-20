@@ -10,13 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elasticsearchVersion: ['7.10.2', '7.13.2', '7.14.2', '7.15.2', '7.16.2', '7.16.3', '7.17.2', '7.17.6', '8.4.3']
+        elasticsearchVersion: ['7.10.2', '7.13.2', '7.14.2', '7.15.2', '7.16.2', '7.16.3', '7.17.2', '7.17.6']
+        java: [8]
+        include:
+          - elasticsearchVersion: '8.3.3'
+            java: 17
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
+      - uses: actions/setup-java@v2
         with:
-          java-version: 8
+          distribution: 'zulu'
+          java-version: ${{ matrix.java }}
       - uses: gradle/wrapper-validation-action@v1
       - uses: gradle/gradle-build-action@v2
         with:
