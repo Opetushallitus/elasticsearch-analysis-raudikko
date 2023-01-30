@@ -3,7 +3,7 @@ plugins {
 }
 
 val baseVersion = System.getProperty("baseVersion") ?: "0.1"
-val elasticsearchVersion = System.getProperty("elasticsearchVersion") ?: "7.17.3"
+val elasticsearchVersion = System.getProperty("elasticsearchVersion") ?: "8.5.2"
 
 group = "fi.evident.elasticsearch"
 version = "$baseVersion-es$elasticsearchVersion"
@@ -48,7 +48,7 @@ artifacts {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(8))
+        languageVersion.set(JavaLanguageVersion.of(17))
         vendor.set(JvmVendorSpec.ADOPTOPENJDK)
     }
 }
