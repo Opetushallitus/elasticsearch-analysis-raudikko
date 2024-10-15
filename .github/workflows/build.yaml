@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elasticsearchVersion: ['8.5.2']
+        elasticsearchVersion: ['8.15.0']
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
